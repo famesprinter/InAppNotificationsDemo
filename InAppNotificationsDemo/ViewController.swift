@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        localNotification()
     }
     
     // MARK: - Function
@@ -32,6 +33,21 @@ class ViewController: UIViewController {
                             backgroundColor: UIColor(red:48.00/255.0, green:174.0/255.0, blue:51.5/255.0, alpha:1.000))
         banner.dismissesOnTap = true
         banner.show(duration: 3.0)
+    }
+    
+    func localNotification() {
+        // create a corresponding local notification
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let someDateTime = formatter.date(from: "2017/02/27 14:01")
+        
+        let notification = UILocalNotification()
+        notification.alertBody = "Title"
+        notification.alertAction = "open"
+        notification.fireDate = someDateTime
+        notification.userInfo = ["title": "Title", "UUID": "ID"]
+        
+        UIApplication.shared.scheduleLocalNotification(notification)
     }
 }
 
