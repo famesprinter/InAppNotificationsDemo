@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    // MARK: - Function
+    func displayBanner() {
         let banner = Banner(title: "Image Notification",
                             subtitle: "Here's a great image notification.",
                             image: UIImage(named: "Icon"),
