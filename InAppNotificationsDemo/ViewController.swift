@@ -21,21 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let c = NSDateComponents()
-        c.hour = 23
-        c.minute = 55
-
-        
-        // Get NSDate given the above date components
-        let date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: c as DateComponents)
-        
-        print(date!)
-        
-//        scheduleLocalNoti(date: setNotificationDay(today: date! as NSDate, selectedDay: 3))
-        
-        let notifications = UIApplication.shared.scheduledLocalNotifications
-        print(notifications ?? "NO NOTIFICATION")
+    
     }
     
     // MARK: - Function
@@ -103,6 +89,26 @@ class ViewController: UIViewController {
         let newDate = calendar.date(byAdding: .weekday, value: daysToAdd, to: today as Date)
         
         return newDate! as NSDate //if you don't have a date it'll crash
+    }
+    
+    // MAKR: - IBAction
+    @IBAction func scheduleNoti() {
+        let c = NSDateComponents()
+        c.hour = 23
+        c.minute = 55
+        
+        
+        // Get NSDate given the above date components
+        let date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: c as DateComponents)
+        
+        print(date!)
+        
+        scheduleLocalNoti(date: setNotificationDay(today: date! as NSDate, selectedDay: 3))
+    }
+    
+    @IBAction func printNotiLog() {
+        let notifications = UIApplication.shared.scheduledLocalNotifications
+        print(notifications ?? "NO NOTIFICATION")
     }
 
 }
