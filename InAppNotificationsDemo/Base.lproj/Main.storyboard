@@ -34,13 +34,22 @@
                                     <action selector="printNotiLog" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vvj-vi-Wot"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-7X-DsZ">
+                                <rect key="frame" x="137" y="444" width="101" height="30"/>
+                                <state key="normal" title="Cancel All Noti"/>
+                                <connections>
+                                    <action selector="clearAllNoti" destination="BYZ-38-t0r" eventType="touchUpInside" id="c24-0a-AfB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="O1b-4A-Fad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FrJ-x0-52z"/>
                             <constraint firstItem="ez4-zr-yU4" firstAttribute="centerX" secondItem="O1b-4A-Fad" secondAttribute="centerX" id="P4V-7z-EAz"/>
+                            <constraint firstItem="bgk-7X-DsZ" firstAttribute="top" secondItem="ez4-zr-yU4" secondAttribute="bottom" constant="31" id="YGk-wF-0YV"/>
                             <constraint firstItem="O1b-4A-Fad" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a8L-gb-EHS"/>
                             <constraint firstItem="ez4-zr-yU4" firstAttribute="top" secondItem="O1b-4A-Fad" secondAttribute="bottom" constant="35" id="dJH-lu-Swu"/>
+                            <constraint firstItem="bgk-7X-DsZ" firstAttribute="centerX" secondItem="ez4-zr-yU4" secondAttribute="centerX" id="msf-7Q-XjN"/>
                         </constraints>
                     </view>
                 </viewController>

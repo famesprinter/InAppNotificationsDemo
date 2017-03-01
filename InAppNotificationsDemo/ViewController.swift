@@ -110,6 +110,10 @@ class ViewController: UIViewController {
         let notifications = UIApplication.shared.scheduledLocalNotifications
         print(notifications ?? "NO NOTIFICATION")
     }
+    
+    @IBAction func clearAllNoti() {
+        UIApplication.shared.cancelAllLocalNotifications()
+    }
 
 }
 
